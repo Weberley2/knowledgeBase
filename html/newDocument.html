@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  	<head>
+	
+    		<meta charset="utf-8">
+		<style>
+			html { 
+				position: relative; 
+				width: 70%; 
+				margin: auto;
+			}
+			input {
+				background: white !important;
+			}
+			textarea {
+   				resize: none;
+				background: white !important;
+			}
+		</style>
+		<script src="/javascript.js"></script>
+    		<title>Knowledge Base</title>
+		<link rel="stylesheet" href="/mini-default.min.css">
+  	</head>
+  	<body onload="setTextAreaHeight()">
+		<h1 style="margin-top:50px;margin-left:4px;">New Document</h1>
+		<input type="text" id="titleInput" style="width: calc(50% - 8px);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Title"><input type="text" id="tagsInput" style="width: calc(50% - 8px);right: 0px;" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Tags" >
+		<textarea id="contentInput" cols="40" rows="25" style="width: calc(100% - 8px);" onkeydown="insertTab(this, event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Content"></textarea>
+		<div style="right:-4px; position:absolute;margin-top:-6px;">
+			<button type="button" style="background-color:#666666;color:white;width:150px;" onclick="location.href='[source destination]'">Cancel</button>
+			<button type="button" style="background-color:#008B00;color:white;width:150px;">Preview</button> 
+			<button type="button" style="background-color:#0066cc;color:white;width:150px;" onclick="createDocument();">Save</button>
+		</div>
+  	</body>
+</html>
+
+

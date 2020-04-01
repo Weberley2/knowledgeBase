@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  	<head>
+	
+    		<meta charset="utf-8">
+		<style>
+			html { 
+				overflow-y: scroll;
+			}
+			input {
+				background: white !important;
+			}
+			table {
+				max-width: calc(100% - 1.5px);
+			}
+			hr {
+				width: calc(100% - 17.5px);
+			}
+			.showDiv:hover {
+				border-color: #0288d1 !important;	
+			}
+			#searchDiv, #outerDiv{
+				width: 70%; 
+				position: relative; 
+				margin: auto;
+			}
+			#documentDiv{
+				margin-left:-4px;
+				margin-right:-4px;
+			}
+			#stickyDiv{
+				z-index: 1;
+				background:#f8f8f8; /*e8e8e8*/
+				position: -webkit-sticky; /* Safari */
+  				position: sticky;
+  				top: 0;
+			}
+			.editDocumentButton{
+				position:absolute;
+				right:75px;
+				top:-9px;
+				background:#008B00 !important;
+				color:white !important;
+				width:130px;
+			}
+			.deleteDocumentButton{
+				position:absolute;
+				right:0px;
+				top:-9px;
+				background: #666666 !important;
+				color:white !important;
+				width:68px;
+				height:42px;
+				display:block !important;
+				background-image: url("/remove.png") !important;
+				background-size: 20px !important;
+				background-repeat: no-repeat !important;
+  				background-position: center !important; 
+			}
+			.addDocumentButton{
+				width:68px;
+				height:42px;
+				display:block !important;
+				background-image: url("/add.png") !important;
+				background-size: 26px !important;
+				background-repeat: no-repeat !important;
+  				background-position: center !important;
+				top:15px;
+				background-color:#0066cc !important;
+				right:-4px;
+				position:absolute;
+			}
+			#questionDiv{
+				position:absolute;
+				width:17.5%;
+				height:20%;
+				left:41.25%;
+				top:35%;
+				background:#f8f8f8;
+				border:.0625rem solid var(--input-border-color);
+				border-color: #0288d1 !important;
+				z-index:-1;
+				visibility:hidden;
+			}
+		</style>
+		<script src="/javascript.js"></script> 
+    		<title>Knowledge Base</title>
+		<link rel="stylesheet" href="/mini-default.min.css">
+  	</head>
+  	<body onload="addEventListenerToSearchBar()">
+		<div id="stickyDiv">
+			<div homeDiv style="background-image:url(/favicon.ico);width: 42px;height: 42px;position: absolute;background-size: 42px 42px;left: calc(7.5% - 21px);margin-top: 23px;" onclick="location.href='/'">
+				
+			</div>
+			<div id="searchDiv">
+				<input type="text" id="searchBar" style="width: calc(100% - 83px); margin-top:23px" placeholder="tags, &quot;title&quot;,'text' ">
+				<button type="button" class="addDocumentButton" onclick="location.href='/new'"></button>
+			</div>
+			<hr style="border-width: 0px;border-top:.0625rem solid var(--input-border-color);">
+		</div>
+		<div id="outerDiv">
+			<div id="documentDiv" style="margin-top:25px;position:relative;">
+				[title]
+				<button type="button" class="editDocumentButton" onclick="changeLocation('/edit/[id]');">Edit</button>
+				<button type="button" class="deleteDocumentButton" onclick="showDeleteDocumentDiv();"></button>
+				[content]
+			</div>
+		</div>
+		<div id="questionDiv">
+			<h3 style="text-align:center;top:10%;position:relative;">Delete this document?</h3>
+			<div style="margin:auto; width:95%;height:42px;position:absolute; left:2.5%;bottom:15%;">
+				<button type="button" style="background-color:#EE2C2C;color:white;width:45%; left:0px; position:absolute;" onclick="deleteDocument();">Yes</button>
+				<button type="button" style="background-color:#008B00;color:white;width:45%; right:0px; position:absolute;" onclick="hideDeleteDocumentDiv();">No</button>
+			</div>
+		</div>
+		
+		
+  	</body>
+</html>
+
+

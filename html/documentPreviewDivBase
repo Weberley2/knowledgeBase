@@ -1,0 +1,8 @@
+<div class="showDiv" style="overflow: hidden; border:.0625rem solid var(--input-border-color); margin-left:4px;margin-right:4px;position:relative;height:129px;" onclick="document.location.href='/[id]'";>
+	<p style="color:#0066cc;">[title]</p> 
+	<p style="position:absolute;margin-top: -32px;right: 4px;color:#0066cc;">[tags]</p>
+	<hr style="border-width: 0px;border-top:.0625rem solid var(--input-border-color);">
+	[content]
+	<button type="button" class="editDocumentButton" onclick="changeLocation('/edit/[id]'); event.stopPropagation();">Edit</button>
+</div>
+

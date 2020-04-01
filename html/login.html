@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  	<head>
+	
+    		<meta charset="utf-8">
+		<style>
+			html { 
+				position: relative; 
+				width: 70%; 
+				margin: auto;
+			}
+			input {
+				background: white !important;
+			}
+			.showDiv:hover {
+				border-color: #0288d1 !important;
+			}
+			.editDocumentButton{
+				position:absolute;
+				right:-2px;
+				bottom:-2px;
+				z-index:-1;
+				background:#008B00 !important;
+				color:white !important;
+				width:130px;
+				visibility:hidden;
+				box-shadow: 0px 0px 2px 5px #f8f8f8;
+			}
+			.addDocumentButton{
+				width:68px;
+				height:42px;
+				display:block !important;
+				background-image: url("/add.png") !important;
+				background-size: 26px !important;
+				background-repeat: no-repeat !important;
+  				background-position: center !important;
+				top:97px;
+				background-color:#0066cc !important;
+				right:-4px;
+				position:absolute;
+			}
+			.showDiv:hover .editDocumentButton{
+				z-index:1;
+				visibility:visible;
+			}
+
+		</style>
+		<script src="/javascript.js"></script>
+    		<title>Knowledge Base</title>
+		<link rel="stylesheet" href="/mini-default.min.css">
+  	</head>
+  	<body onload="addEventListenerToLoginBar()">
+		<h1 style="text-align: center; margin-top:50px">Knowledge Base</h1>
+		<input type="password" id="searchBar" style="width: 40%; position:relative;left:30%;">
+		<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="position: relative; left:0%">
+		
+  	</body>
+</html>
+
+
